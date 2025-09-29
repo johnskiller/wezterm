@@ -16,7 +16,7 @@ Config.background = {
     source = { Color = theme.background },
     width = "100%",
     height = "100%",
-    opacity = G.opacity or 1,
+    opacity = G.opacity or 0.9,
   },
 }
 
@@ -25,12 +25,12 @@ Config.bold_brightens_ansi_colors = "BrightAndBold"
 ---char select and command palette
 Config.char_select_bg_color = theme.brights[6]
 Config.char_select_fg_color = theme.background
-Config.char_select_font_size = 12
+Config.char_select_font_size = 16
 
 Config.command_palette_bg_color = theme.brights[6]
 Config.command_palette_fg_color = theme.background
-Config.command_palette_font_size = 14
-Config.command_palette_rows = 20
+Config.command_palette_font_size = 18
+Config.command_palette_rows = 22
 
 ---cursor
 Config.cursor_blink_ease_in = "EaseIn"
@@ -85,5 +85,9 @@ Config.skip_close_confirmation_for_processes_named = {
 Config.window_close_confirmation = "AlwaysPrompt"
 
 color.set_tab_button(Config, theme)
+
+-- Set the default window size
+Config.initial_rows = 32
+Config.initial_cols = 120
 
 return Config
